@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Page</title>
+    <link rel="stylesheet" href="src/index.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar__brand">
+        <span class="navbar__brand-name">BrandName</span>
+      </div>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#" class="navbar__link active">Home</a></li>
+        <li><a href="#" class="navbar__link">About</a></li>
+        <li><a href="#" class="navbar__link">Services</a></li>
+        <li><a href="#" class="navbar__link">Contact</a></li>
+      </ul>
+
+      <button
+        class="navbar__hamburger"
+        id="hamburgerBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navOverlay"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+        <button
+          class="nav-overlay__close"
+          id="closeOverlay"
+          aria-label="Close navigation"
+        >
+          &times;
+        </button>
+        <ul class="nav-overlay__links">
+          <li><a href="#" class="nav-overlay__link active">Home</a></li>
+          <li><a href="#" class="nav-overlay__link">About</a></li>
+          <li><a href="#" class="nav-overlay__link">Services</a></li>
+          <li><a href="#" class="nav-overlay__link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Dobrodosli sekcija-->
+    <div class="dobrodosli">
+      <div class="dobrodosli__overlay">
+        <div class="dobrodosli__content">
+          <h1 class="dobrodosli__title">Dobrodošli na stranicu</h1>
+          <p class="dobrodosli__text">
+            Ovo je kratki uvodni tekst koji opisuje sadržaj ili svrhu ove
+            stranice.
+          </p>
+          <div class="dobrodosli__actions">
+            <a href="#" class="btn btn--primary">Započni</a>
+            <a href="#" class="btn btn--outline">Saznaj više</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Link na stranicu s radovima-->
+    <div class="pog_radove">
+      <div class="pog_radove__content">
+        <!--Tekst s gumbom-->
+        <div class="pog_radove__intro">
+          <h2 class="pog_radove__title">
+            Pogledaj nase radove i stil koji gradimo za klijente.
+          </h2>
+          <p class="pog_radove__text">
+            Izdvojili smo nekoliko recentnih primjera kako bi odmah vidio smjer,
+            kvalitetu i vizualni potpis koji donosimo u svaki projekt.
+          </p>
+          <a href="radovi.html" class="pog_radove__button">
+            Pogledaj sve radove
+            <span class="pog_radove__button-arrow" aria-hidden="true"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+        <!--Galerija radova-->
+        <div class="pog_radove__gallery" aria-label="Primjeri radova">
+          <!--Slika br. 1-->
+          <div class="pog_radove__card">
+            <img
+              class="pog_radove__image"
+              src="src/assets/rad-1.svg"
+              alt="Preview rada za vizualni identitet"
+            />
+          </div>
+          <!--Slika br. 2-->
+          <div class="pog_radove__card">
+            <img
+              class="pog_radove__image"
+              src="src/assets/rad-2.svg"
+              alt="Preview rada za web landing stranicu"
+            />
+          </div>
+          <!--Slika br. 3-->
+          <div class="pog_radove__card pog_radove__card--print">
+            <img
+              class="pog_radove__image"
+              src="src/assets/rad-3.svg"
+              alt="Preview rada za promotivne materijale"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Usluge sekijca-->
+    <div class="usluge">
+      <h1 class="usluge__title">Nase usluge</h1>
+      <hr class="usluge__line" />
+      <div class="usluge__track">
+        <div class="kartica">
+          <h1>Usluga 1</h1>
+        </div>
+        <div class="kartica">
+          <h1>Usluga 2</h1>
+        </div>
+        <div class="kartica">
+          <h1>Usluga 3</h1>
+        </div>
+        <div class="kartica">
+          <h1>Usluga 4</h1>
+        </div>
+        <div class="kartica">
+          <h1>Usluga 5</h1>
+        </div>
+        <div class="kartica">
+          <h1>Usluga 6</h1>
+        </div>
+      </div>
+    </div>
+    <!--Naruci sekcija-->
+    <div class="naruci">
+      <h1>KONTAKTIRAJ NAS I NARUČI SVOJ LOGOTIP ODMAH!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a href=""> Naruči odmah </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__content">
+          <div class="footer__brand-block">
+            <h2 class="footer__brand">BrandName</h2>
+            <p class="footer__brand-text">
+              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan dojam.
+            </p>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigacija">
+            <a href="#" class="footer__link">Home</a>
+            <a href="#" class="footer__link">About</a>
+            <a href="radovi.html" class="footer__link">Radovi</a>
+            <a href="#" class="footer__link">Contact</a>
+          </nav>
+
+          <div class="footer__connect">
+            <h3 class="footer__title">Upoznaj nas</h3>
+            <p class="footer__connect-text">
+              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom projektu.
+            </p>
+            <div class="footer__socials" aria-label="Društvene mreže">
+              <a href="#" class="footer__social">In</a>
+              <a href="#" class="footer__social">Ig</a>
+              <a href="#" class="footer__social">Be</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Sva prava pridrzana...</p>
+        <p>Web stranicu izradio: Ivan Mihael Zec</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="src/navbar.js" defer></script>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radovi</title>
+    <link rel="stylesheet" href="src/index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__brand">
+        <a href="index.html" class="navbar__brand-name">BrandName</a>
+      </div>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="radovi.html" class="navbar__link active">Radovi</a></li>
+        <li><a href="#" class="navbar__link">Services</a></li>
+        <li><a href="#" class="navbar__link">Contact</a></li>
+      </ul>
+
+      <button
+        class="navbar__hamburger"
+        id="hamburgerBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navOverlay"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+        <button
+          class="nav-overlay__close"
+          id="closeOverlay"
+          aria-label="Close navigation"
+        >
+          &times;
+        </button>
+        <ul class="nav-overlay__links">
+          <li><a href="index.html" class="nav-overlay__link">Home</a></li>
+          <li><a href="radovi.html" class="nav-overlay__link active">Radovi</a></li>
+          <li><a href="#" class="nav-overlay__link">Services</a></li>
+          <li><a href="#" class="nav-overlay__link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="radovi-page">
+      <section class="radovi-hero">
+        <span class="radovi-hero__eyebrow">Portfolio</span>
+        <h1>Izdvojeni radovi koji pokazuju naš pristup dizajnu i prezentaciji.</h1>
+        <p>
+          Ovdje možeš prikazati kompletne projekte, različite stilove i nekoliko
+          jasnih primjera koji grade povjerenje prije kontakta.
+        </p>
+      </section>
+
+      <section class="radovi-grid" aria-label="Galerija radova">
+        <article class="radovi-tile radovi-tile--large">
+          <span class="radovi-tile__tag">Brand identity</span>
+          <h2>Minimalistički identitet za premium uslugu</h2>
+          <p>Mirna paleta, precizan grid i jasna hijerarhija sadržaja.</p>
+        </article>
+        <article class="radovi-tile radovi-tile--accent">
+          <span class="radovi-tile__tag">Web campaign</span>
+          <h2>Kampanjska landing stranica</h2>
+          <p>Vizual fokusiran na konverzije, naslov i CTA sekcije.</p>
+        </article>
+        <article class="radovi-tile radovi-tile--light">
+          <span class="radovi-tile__tag">Social pack</span>
+          <h2>Set vizuala za društvene mreže</h2>
+          <p>Dosljedni formati za objave, storyje i oglase.</p>
+        </article>
+        <article class="radovi-tile radovi-tile--dark">
+          <span class="radovi-tile__tag">Print design</span>
+          <h2>Promotivni materijali za offline kampanju</h2>
+          <p>Balans snažnog naslova, ritma elemenata i jasnih informacija.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__content">
+          <div class="footer__brand-block">
+            <h2 class="footer__brand">BrandName</h2>
+            <p class="footer__brand-text">
+              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan dojam.
+            </p>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigacija">
+            <a href="index.html" class="footer__link">Home</a>
+            <a href="#" class="footer__link">About</a>
+            <a href="radovi.html" class="footer__link">Radovi</a>
+            <a href="#" class="footer__link">Contact</a>
+          </nav>
+
+          <div class="footer__connect">
+            <h3 class="footer__title">Upoznaj nas</h3>
+            <p class="footer__connect-text">
+              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom projektu.
+            </p>
+            <div class="footer__socials" aria-label="Društvene mreže">
+              <a href="#" class="footer__social">In</a>
+              <a href="#" class="footer__social">Ig</a>
+              <a href="#" class="footer__social">Be</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Sva prava pridrzana...</p>
+        <p>Web stranicu izradio: Ivan Mihael Zec</p>
+      </div>
+    </footer>
+
+    <script src="src/navbar.js" defer></script>
+  </body>
+</html>
