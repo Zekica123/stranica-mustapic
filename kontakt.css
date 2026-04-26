@@ -1,0 +1,254 @@
+:root {
+  --overlay: rgba(79, 110, 247, 0.6);
+  --donja-crta: #4f6ef7;
+}
+
+.kontakt-header {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-image: url("slike/kontakt_header.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 6px solid var(--donja-crta);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 50px;
+  gap: 1rem;
+}
+.kontakt-header h1 {
+  font-size: 6rem;
+}
+.kontakt-header h1 span {
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(79, 110, 247, 0.8);
+}
+
+.kontakt {
+  width: 100%;
+  padding: clamp(48px, 7vw, 96px) 1rem;
+  background:
+    radial-gradient(circle at 12% 8%, #d8f2f7 0%, #f7f9fb 42%),
+    linear-gradient(180deg, #fdfefe 0%, #eef4f8 100%);
+}
+
+.kontakt__inner {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e8eef2;
+  border-radius: 24px;
+  padding: clamp(22px, 4vw, 42px);
+  box-shadow: 0 24px 60px rgba(18, 36, 51, 0.09);
+}
+
+.kontakt__intro {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.kontakt__title {
+  font-size: clamp(1.9rem, 3.5vw, 2.65rem);
+  letter-spacing: -0.02em;
+  color: var(--kontakt-text);
+}
+
+.kontakt__subtitle {
+  margin-top: 0.45rem;
+  color: var(--kontakt-muted);
+  font-size: 0.98rem;
+}
+
+.kontakt__form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.kontakt__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.kontakt__field span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--kontakt-text);
+}
+
+.kontakt__field input {
+  width: 100%;
+  border: 1px solid var(--kontakt-border);
+  background: var(--kontakt-surface);
+  border-radius: 999px;
+  padding: 0.82rem 1rem;
+  color: var(--kontakt-text);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kontakt__field input:focus {
+  outline: none;
+  border-color: var(--kontakt-accent);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(45, 179, 201, 0.12);
+}
+
+.kontakt__submit {
+  grid-column: 1 / -1;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, var(--kontakt-accent) 0%, #22bfd9 100%);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.kontakt__submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(26, 143, 164, 0.26);
+  background: linear-gradient(
+    90deg,
+    var(--kontakt-accent-dark) 0%,
+    var(--kontakt-accent) 100%
+  );
+}
+
+.kontakt__options {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.kontakt-card {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  background: var(--kontakt-card);
+  border: 1px solid #e3ebf0;
+  border-radius: 18px;
+  padding: 1rem 0.85rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kontakt-card:hover {
+  transform: translateY(-3px);
+  border-color: #c9d9e3;
+  box-shadow: 0 14px 28px rgba(24, 48, 67, 0.12);
+}
+
+.kontakt-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dbf3f8;
+  color: var(--kontakt-accent-dark);
+}
+
+.kontakt-card__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.kontakt-card h3 {
+  font-size: 0.95rem;
+  color: var(--kontakt-text);
+}
+
+.kontakt-card p {
+  color: var(--kontakt-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+@media  (max-width: 768px) {
+    .kontakt-header h1 {
+        font-size: 4rem;
+    }
+}
+/* ── Responzivnost HEADERA ── */
+@media  (max-width: 500px) {
+    .kontakt-header {
+        min-height: 300px;
+        text-align: center;
+    }
+
+    .kontakt-header .overlay {
+        padding-left: 0;
+        justify-content: center;
+    }
+    .kontakt-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 920px) {
+  .kontakt__form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kontakt__field:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  .kontakt__options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kontakt-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 620px) {
+  .kontakt__inner {
+    border-radius: 18px;
+    padding: 1.05rem;
+  }
+
+  .kontakt__form,
+  .kontakt__options {
+    grid-template-columns: 1fr;
+  }
+
+  .kontakt__field:last-of-type,
+  .kontakt-card:last-child {
+    grid-column: auto;
+  }
+
+  .kontakt__submit {
+    padding-block: 0.95rem;
+  }
+}
