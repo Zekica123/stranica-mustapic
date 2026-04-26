@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radovi</title>
     <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/radovi.css" />
   </head>
   <body>
+    <!--Navigacija-->
     <nav class="navbar">
       <div class="navbar__brand">
         <a href="index.html" class="navbar__brand-name">BrandName</a>
       </div>
 
       <ul class="navbar__links" id="navLinks">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="radovi.html" class="navbar__link active">Radovi</a></li>
-        <li><a href="#" class="navbar__link">Services</a></li>
-        <li><a href="#" class="navbar__link">Contact</a></li>
+        <li><a href="index.html" class="navbar__link">Pocetna</a></li>
+        <li><a href="#" class="navbar__link active">Radovi</a></li>
+        <li><a href="kontakt.html" class="navbar__link">Kontakt</a></li>
       </ul>
 
       <button
@@ -39,69 +40,140 @@
           &times;
         </button>
         <ul class="nav-overlay__links">
-          <li><a href="index.html" class="nav-overlay__link">Home</a></li>
-          <li><a href="radovi.html" class="nav-overlay__link active">Radovi</a></li>
-          <li><a href="#" class="nav-overlay__link">Services</a></li>
-          <li><a href="#" class="nav-overlay__link">Contact</a></li>
+          <li><a href="index.html" class="nav-overlay__link">Pocetna</a></li>
+          <li>
+            <a href="#" class="nav-overlay__link active">Radovi</a>
+          </li>
+          <li><a href="kontakt.html" class="nav-overlay__link">Kontakt</a></li>
         </ul>
       </div>
     </nav>
-
-    <main class="radovi-page">
-      <section class="radovi-hero">
-        <span class="radovi-hero__eyebrow">Portfolio</span>
-        <h1>Izdvojeni radovi koji pokazuju naš pristup dizajnu i prezentaciji.</h1>
+    <!--Header-->
+    <div class="radovi-header">
+      <div class="overlay">
+        <h1>NAŠI<br /><span>RADOVI</span></h1>
+      </div>
+    </div>
+    <!--Radovi-->
+    <!-- Rad br.1 -->
+    <div class="radovi-red1">
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
+      </div>
+      <div class="firma-info">
+        <h2>Firma Alpha d.o.o.</h2>
         <p>
-          Ovdje možeš prikazati kompletne projekte, različite stilove i nekoliko
-          jasnih primjera koji grade povjerenje prije kontakta.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
         </p>
-      </section>
-
-      <section class="radovi-grid" aria-label="Galerija radova">
-        <article class="radovi-tile radovi-tile--large">
-          <span class="radovi-tile__tag">Brand identity</span>
-          <h2>Minimalistički identitet za premium uslugu</h2>
-          <p>Mirna paleta, precizan grid i jasna hijerarhija sadržaja.</p>
-        </article>
-        <article class="radovi-tile radovi-tile--accent">
-          <span class="radovi-tile__tag">Web campaign</span>
-          <h2>Kampanjska landing stranica</h2>
-          <p>Vizual fokusiran na konverzije, naslov i CTA sekcije.</p>
-        </article>
-        <article class="radovi-tile radovi-tile--light">
-          <span class="radovi-tile__tag">Social pack</span>
-          <h2>Set vizuala za društvene mreže</h2>
-          <p>Dosljedni formati za objave, storyje i oglase.</p>
-        </article>
-        <article class="radovi-tile radovi-tile--dark">
-          <span class="radovi-tile__tag">Print design</span>
-          <h2>Promotivni materijali za offline kampanju</h2>
-          <p>Balans snažnog naslova, ritma elemenata i jasnih informacija.</p>
-        </article>
-      </section>
-    </main>
-
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+    </div>
+    <!-- Rad br.2 -->
+    <div class="radovi-red2">
+      <div class="firma-info">
+        <h2>Studio Beta</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
+        </p>
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
+      </div>
+    </div>
+    <!-- Rad br.3 -->
+    <div class="radovi-red1">
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
+      </div>
+      <div class="firma-info">
+        <h2>Gamma Group</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
+        </p>
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+    </div>
+    <!-- Rad br.4 -->
+    <div class="radovi-red2">
+      <div class="firma-info">
+        <h2>Delta Solutions</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
+        </p>
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
+      </div>
+    </div>
+    <!-- Rad br.5 -->
+    <div class="radovi-red1">
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
+      </div>
+      <div class="firma-info">
+        <h2>Epsilon Tech</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
+        </p>
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+    </div>
+    <!-- Rad br.6 -->
+    <div class="radovi-red2">
+      <div class="firma-info">
+        <h2>Zeta Design</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+          temporibus eaque amet exercitationem eius consequatur, magnam sequi
+          cum consectetur tempore facere quaerat officiis dignissimos veniam
+          quis mollitia itaque fuga non.
+        </p>
+        <a href="#" class="btn-saznaj">Saznaj više</a>
+      </div>
+      <div class="logo-kartica">
+        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
+      </div>
+    </div>
+    <!--Footer-->
     <footer class="footer">
       <div class="footer__main">
         <div class="footer__content">
           <div class="footer__brand-block">
             <h2 class="footer__brand">BrandName</h2>
             <p class="footer__brand-text">
-              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan dojam.
+              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan
+              dojam.
             </p>
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigacija">
-            <a href="index.html" class="footer__link">Home</a>
-            <a href="#" class="footer__link">About</a>
-            <a href="radovi.html" class="footer__link">Radovi</a>
-            <a href="#" class="footer__link">Contact</a>
+            <a href="index.html" class="footer__link">Početna</a>
+            <a href="#" class="footer__link">Radovi</a>
+            <a href="kontakt.html" class="footer__link">Kontakt</a>
           </nav>
 
           <div class="footer__connect">
             <h3 class="footer__title">Upoznaj nas</h3>
             <p class="footer__connect-text">
-              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom projektu.
+              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
+              projektu.
             </p>
             <div class="footer__socials" aria-label="Društvene mreže">
               <a href="#" class="footer__social">In</a>
@@ -113,7 +185,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>Sva prava pridrzana...</p>
+        <p>Sva prava pridržana.</p>
         <p>Web stranicu izradio: Ivan Mihael Zec</p>
       </div>
     </footer>
