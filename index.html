@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Page</title>
-    <link rel="stylesheet" href="src/index.css?ver=2" />
+    <title>BMVisual</title>
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar__brand">
-        <span class="navbar__brand-name">BrandName</span>
+        <img src="src/assets/logo.jpeg" alt="Logo firem BMVisual" />
       </div>
       <!--NORMALNA NAVIGACIJA-->
       <ul class="navbar__links" id="navLinks">
-        <li><a  class="navbar__link active">Pocetna</a></li>
+        <li><a class="navbar__link active">Pocetna</a></li>
         <li><a href="radovi.html" class="navbar__link">Radovi</a></li>
         <li><a href="kontakt.html" class="navbar__link">Kontakt</a></li>
       </ul>
@@ -49,14 +49,26 @@
     <div class="dobrodosli">
       <div class="dobrodosli__overlay">
         <div class="dobrodosli__content">
-          <h1 class="dobrodosli__title">Dobrodošli na stranicu</h1>
+          <h1 class="dobrodosli__title">👋 Dobrodošli!</h1>
+          <hr />
           <p class="dobrodosli__text">
-            Ovo je kratki uvodni tekst koji opisuje sadržaj ili svrhu ove
-            stranice.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea
+            fugit nesciunt quis fuga eius quam natus molestias vero, autem,
+            aperiam sint inventore harum, dolorum doloribus atque id culpa
+            totam?
           </p>
           <div class="dobrodosli__actions">
-            <a href="#" class="btn btn--primary">Započni</a>
-            <a href="#" class="btn btn--outline">Saznaj više</a>
+            <!--Gumb 1-->
+            <a href="radovi.html" class="gumb1">
+              <span>☎️</span>
+              Kontaktiraj nas
+              <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="radovi.html" class="gumb2">
+              <span>🔎</span>
+              Saznati vise
+              <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -66,91 +78,121 @@
       <div class="pog_radove__content">
         <!--Tekst s gumbom-->
         <div class="pog_radove__intro">
-          <h2 class="pog_radove__title">
-            Pogledaj nase radove i stil koji gradimo za klijente.
-          </h2>
-          <p class="pog_radove__text">
-            Izdvojili smo nekoliko recentnih primjera kako bi odmah vidio smjer,
-            kvalitetu i vizualni potpis koji donosimo u svaki projekt.
+          <h2 class="pog_radove__title">Radovi i <span>refrence</span></h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Dignissimos et cum rem libero. Eos esse, ipsam necessitatibus quia
+            eaque voluptatum, doloremque cumque dicta impedit, similique numquam
+            quas ipsa ad pariatur.
           </p>
-          <a href="radovi.html" class="pog_radove__button">
-            Pogledaj sve radove
-            <span class="pog_radove__button-arrow" aria-hidden="true"
-              >&rarr;</span
-            >
+          <a href="radovi.html" class="gumb1">
+            <span>🔎</span>Saznajte vise!
+            <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
           </a>
         </div>
         <!--Galerija radova-->
         <div class="pog_radove__gallery" aria-label="Primjeri radova">
-          <!--Slika br. 1-->
-          <div class="pog_radove__card">
-            <img
-              class="pog_radove__image"
-              src="src/assets/rad-1.svg"
-              alt="Preview rada za vizualni identitet"
-            />
-          </div>
-          <!--Slika br. 2-->
-          <div class="pog_radove__card">
-            <img
-              class="pog_radove__image"
-              src="src/assets/rad-2.svg"
-              alt="Preview rada za web landing stranicu"
-            />
-          </div>
-          <!--Slika br. 3-->
-          <div class="pog_radove__card pog_radove__card--print">
-            <img
-              class="pog_radove__image"
-              src="src/assets/rad-3.svg"
-              alt="Preview rada za promotivne materijale"
-            />
+          <div class="pog_radove_track">
+            <a href="radovi.html#rad1" class="radovi_card" data-label="Firma A">
+              <img src="src/assets/rad-1.svg" alt="Primjer rada" />
+            </a>
+            <a href="radovi.html#rad2" class="radovi_card" data-label="Firma B">
+              <img src="src/assets/rad-2.svg" alt="Primjer rada" />
+            </a>
+            <a href="radovi.html#rad3" class="radovi_card" data-label="Firma C">
+              <img src="src/assets/rad-3.svg" alt="Primjer rada" />
+            </a>
           </div>
         </div>
       </div>
     </div>
     <!--Usluge sekijca-->
     <div class="usluge">
-      <h1 class="usluge__title">Nase usluge</h1>
-      <hr class="usluge__line" />
-      <div class="usluge__track">
-        <div class="kartica" id="usluga1">
-          <section class="usluga-tekst">
-            <span>Usluga 01</span>
-          </section>
+      <h1>Nase usluge</h1>
+      <hr />
+      <!--Red 1-->
+      <section class="usluge_red">
+        <div class="usluge_card" data-label="1">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 1</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
         </div>
-        <div class="kartica" id="usluga2">
-          <section class="usluga-tekst">
-            <span>Usluga 02</span>
-          </section>
+        <div class="usluge_card" data-label="2">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 2</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
         </div>
-        <div class="kartica" id="usluga3">
-          <section class="usluga-tekst">
-            <span>Usluga 03</span>
-          </section>
+        <div class="usluge_card" data-label="3">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 3</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
         </div>
-        <div class="kartica" id="usluga4">
-          <section class="usluga-tekst">
-            <span>Usluga 04</span>
-          </section>
+        <div class="usluge_card" data-label="4">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 1</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
         </div>
-        <div class="kartica" id="usluga5">
-          <section class="usluga-tekst">
-            <span>Usluga 05</span>
-          </section>
+        <div class="usluge_card" data-label="5">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 2</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
         </div>
-        <div class="kartica" id="usluga6">
-          <section class="usluga-tekst">
-            <span>Usluga 06</span>
-          </section>
+        <div class="usluge_card" data-label="6">
+          <div class="usluge_card__left">
+            <span class="usluge_ikona">📷</span>
+            <span class="usluge_naziv">Usluga 3</span>
+          </div>
+          <button class="usluge_card__plus">+</button>
+        </div>
+      </section>
+    </div>
+    <!--O nama -->
+    <div class="about">
+      <div class="about__content">
+        <div class="about__slika">
+          <img src="src/assets/onama.jpg" alt="O nama" />
+        </div>
+        <div class="about__text">
+          <h3>Upoznaj nas!</h3>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsa
+            nobis quaerat libero cumque quod recusandae excepturi reprehenderit
+            iste. Distinctio optio maxime iure odit quod, maiores architecto cum
+            necessitatibus voluptas.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span>10+</span>
+              <small>Godina iskustva</small>
+            </div>
+            <div class="about__stat">
+              <span>120+</span>
+              <small>Zadovoljnih klijenata</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!--Naruci sekcija-->
     <div class="naruci">
-      <h1>KONTAKTIRAJ NAS I NARUČI SVOJ LOGOTIP ODMAH!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <a href=""> Naruči odmah </a>
+      <h1>KONTAKTIRAJ NAS I <span class="kontrast">NARUČI SVOJ LOGOTIP</span> ODMAH!</h1>
+      <a href="radovi.html" class="gumb1">
+        <span>☎️</span>
+        Kontaktiraj nas
+        <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
+      </a>
     </div>
     <footer class="footer">
       <div class="footer__main">
@@ -158,7 +200,8 @@
           <div class="footer__brand-block">
             <h2 class="footer__brand">BrandName</h2>
             <p class="footer__brand-text">
-              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan dojam.
+              Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan
+              dojam.
             </p>
           </div>
 
@@ -171,7 +214,8 @@
           <div class="footer__connect">
             <h3 class="footer__title">Upoznaj nas</h3>
             <p class="footer__connect-text">
-              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom projektu.
+              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
+              projektu.
             </p>
             <div class="footer__socials" aria-label="Društvene mreže">
               <a href="#" class="footer__social">In</a>
