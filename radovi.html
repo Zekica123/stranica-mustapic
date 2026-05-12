@@ -1,25 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="hr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radovi</title>
-    <link rel="stylesheet" href="src/index.css" />
+    <title>BMVisual - Radovi</title>
     <link rel="stylesheet" href="src/radovi.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/64x64.png"
+    />
   </head>
   <body>
-    <!--Navigacija-->
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar__brand">
-        <a href="index.html" class="navbar__brand-name">BrandName</a>
+        <img src="src/assets/logo.jpeg" alt="Logo firem BMVisual" />
       </div>
-
+      <!--NORMALNA NAVIGACIJA-->
       <ul class="navbar__links" id="navLinks">
         <li><a href="index.html" class="navbar__link">Pocetna</a></li>
-        <li><a href="#" class="navbar__link active">Radovi</a></li>
+        <li><a href="radovi.html" class="navbar__link active">Radovi</a></li>
         <li><a href="kontakt.html" class="navbar__link">Kontakt</a></li>
       </ul>
-
+      <!--HAMBURGER MENU-->
       <button
         class="navbar__hamburger"
         id="hamburgerBtn"
@@ -51,106 +68,45 @@
     <!--Header-->
     <div class="radovi-header">
       <div class="overlay">
-        <h1>NAŠI<br /><span>RADOVI</span></h1>
+        <h1 class="r-h1">NASI</h1>
+        <hr />
+        <h1 class="r-h2">RADOVI</h1>
       </div>
     </div>
     <!--Radovi-->
-    <!-- Rad br.1 -->
-    <div class="radovi-red1" id="rad1">
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
-      </div>
-      <div class="firma-info">
-        <h2>Firma Alpha d.o.o.</h2>
+    <div class="red1">
+      <section class="red1-slika">
+        <img src="src/assets/logo.jpeg" alt="" srcset="" />
+      </section>
+      <article>
+        <h2>Rad 1</h2>
+        <hr />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus
+          soluta iure necessitatibus quisquam sed ipsam dignissimos repellendus
+          sequi tenetur laboriosam corporis ad harum unde distinctio omnis, ab
+          doloribus ea.
         </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
+      </article>
     </div>
-    <!-- Rad br.2 -->
-    <div class="radovi-red2">
-      <div class="firma-info">
-        <h2>Studio Beta</h2>
+    <div class="red1">
+      <article>
+        <h2>Rad 2</h2>
+        <hr />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus
+          soluta iure necessitatibus quisquam sed ipsam dignissimos repellendus
+          sequi tenetur laboriosam corporis ad harum unde distinctio omnis, ab
+          doloribus ea.
         </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
-      </div>
+      </article>
+      <section class="red1-slika">
+        <img src="src/assets/logo.jpeg" alt="" srcset="" />
+      </section>
     </div>
-    <!-- Rad br.3 -->
-    <div class="radovi-red1">
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
-      </div>
-      <div class="firma-info">
-        <h2>Gamma Group</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
-        </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
-    </div>
-    <!-- Rad br.4 -->
-    <div class="radovi-red2">
-      <div class="firma-info">
-        <h2>Delta Solutions</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
-        </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
-      </div>
-    </div>
-    <!-- Rad br.5 -->
-    <div class="radovi-red1">
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph1.jpg" alt="Logo firme" />
-      </div>
-      <div class="firma-info">
-        <h2>Epsilon Tech</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
-        </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
-    </div>
-    <!-- Rad br.6 -->
-    <div class="radovi-red2">
-      <div class="firma-info">
-        <h2>Zeta Design</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
-          temporibus eaque amet exercitationem eius consequatur, magnam sequi
-          cum consectetur tempore facere quaerat officiis dignissimos veniam
-          quis mollitia itaque fuga non.
-        </p>
-        <a href="#" class="btn-saznaj">Saznaj više</a>
-      </div>
-      <div class="logo-kartica">
-        <img src="src/slike/radovi_ph2.jpg" alt="Logo firme" />
-      </div>
-    </div>
+    <!--Galerija slika-->
+    <div></div>
+
     <!--Footer-->
     <footer class="footer">
       <div class="footer__main">
@@ -164,13 +120,13 @@
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigacija">
-            <a href="index.html" class="footer__link">Početna</a>
-            <a href="#" class="footer__link">Radovi</a>
+            <a href="#" class="footer__link">Pocetna</a>
+            <a href="radovi.html" class="footer__link">Radovi</a>
             <a href="kontakt.html" class="footer__link">Kontakt</a>
           </nav>
 
           <div class="footer__connect">
-            <h3 class="footer__title">Upoznaj nas</h3>
+            <h3 class="footer__title">Kontakti</h3>
             <p class="footer__connect-text">
               Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
               projektu.
@@ -185,11 +141,10 @@
       </div>
 
       <div class="footer__bottom">
-        <p>Sva prava pridržana.</p>
+        <p>BMVisual 2026</p>
         <p>Web stranicu izradio: Ivan Mihael Zec</p>
       </div>
     </footer>
-
     <script src="src/navbar.js" defer></script>
   </body>
 </html>

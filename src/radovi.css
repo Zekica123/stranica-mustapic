@@ -1,10 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
-  --overlay: rgba(79, 110, 247, 0.6);
-  --donja-crta: #4f6ef7;
-  --red1: #4f6ef7;
-  --red2: #d8f2f7;
+  --tamna: #3674b5;
+  --srednja: #578fca;
+  --svjetla: #a1e3f9;
+  --minimalna: #d1f8ef;
+  --bijela: #fff;
+  --crna: #000;
+  --gradijent1: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  --gradijent2: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  --gradijent3: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --gradijent4: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  --gradijent5: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  --gradijent6: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  --gradijent_main: linear-gradient(
+    135deg,
+    var(--svjetla),
+    var(--srednja),
+    var(--tamna)
+  );
+}
+.gumb1,
+.gumb2 {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+  min-width: 40%;
+  gap: 1rem;
+  padding: 20px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.gumb3 {
+  text-decoration: none;
+  background-color: var(--tamna);
+  color: var(--bijela);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow:
+    rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0,
+    rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1.1rem;
+  outline: none;
+  overflow: hidden;
+  padding: 20px 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  width: 100%;
+  border-bottom: 5px solid var(--svjetla);
+  transition: 0.25s ease-in-out;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 5rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+p {
+  font-size: 1.3rem;
+}
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.navbar::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  content: "";
+  background: linear-gradient(
+    270deg,
+    #3674b5,
+    #578fca,
+    #a1e3f9,
+    #578fca,
+    #3674b5
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+.navbar__brand img {
+  max-width: 400px;
+  max-height: 150px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+/* Desktop links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+.navbar__link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--crna);
+  text-decoration: none;
+  border-radius: 6px;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+.navbar__link:hover {
+  background: var(--srednja);
+  color: var(--bijela);
+}
+.navbar__link.active {
+  background: var(--srednja);
+  color: var(--bijela);
+}
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.18s;
+}
+.navbar__hamburger:hover {
+  background: #f0f2ff;
+}
+.navbar__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1a1a2e;
+  border-radius: 2px;
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+}
+/* ─── Overlay navigation ───────────────────────────────── */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  z-index: 200;
+
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.nav-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.nav-overlay__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.18s;
 }
 
+.nav-overlay__close:hover {
+  color: #4f6ef7;
+}
+
+.nav-overlay__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-overlay__link {
+  display: block;
+  padding: 0.75rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+.nav-overlay__link:hover,
+.nav-overlay__link.active {
+  color: #4f6ef7;
+  background: rgba(79, 110, 247, 0.12);
+}
+/*-----------------------------------------------------------------------------*/
+/*-HEADER-*/
 .radovi-header {
   position: relative;
   width: 100%;
@@ -12,7 +272,6 @@
   background-image: url("slike/radovi_s1.jpg");
   background-size: cover;
   background-position: center;
-  border-bottom: 6px solid var(--donja-crta);
 }
 .overlay {
   position: absolute;
@@ -20,178 +279,239 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--overlay);
+  background-color: rgb(26, 26, 46,0.9);
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   padding-left: 50px;
-  gap: 1rem;
+  gap: 15px;
 }
-.radovi-header h1 {
-  font-size: 6rem;
+.radovi-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: var(--gradijent5);
+  background-size: 400% 400%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  animation: gradientMove 8s ease infinite;
 }
-.radovi-header h1 span {
-  color: #fff;
-  text-shadow: 0 4px 12px rgba(79, 110, 247, 0.8);
+.r-h1 {
+  padding-top: 50px;
+  color: var(--svjetla);
+}
+.radovi-header hr {
+  width: 60%;
+  height: 15px;
+  background: var(--gradijent5);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 0;
+  border-radius: 10px;
+}
+.r-h2 {
+  color: var(--bijela);
+  padding-bottom: 100px;
 }
 /* ── Redovi radova ── */
-.radovi-red1,
-.radovi-red2 {
+.red1{
+  height: 500px;
   width: 100%;
-  min-height: 200px;
+  background: var(--gradijent1);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 40px 80px;
-  gap: 60px;
 }
-.radovi-red1 p{
-  color: var(--red2);
+.red1-slika{
+  flex: 0 0 50%;
+  height: 100%;
 }
-.radovi-red2 p{
-  color: black;
-}
-
-.radovi-red1 {
-  background: var(--red1);
-}
-
-.radovi-red2 {
-  background: #ffffff;
-  border-bottom: 2px solid #e0e8ff;
-}
-
-.radovi-red1 .logo-kartica,
-.radovi-red2 .logo-kartica {
-  flex: 0 0 180px;
-  height: 140px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(79, 110, 247, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.radovi-red2 .logo-kartica {
-  background: #eef2ff;
-  box-shadow: 0 4px 16px rgba(79, 110, 247, 0.12);
-}
-
-.radovi-red1 .logo-kartica img,
-.radovi-red2 .logo-kartica img {
+.red1-slika img{
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
 }
-
-/* Tekst + gumb */
-.radovi-red1 .firma-info,
-.radovi-red2 .firma-info {
-  flex: 1;
+.red1 article, .red2 article{
+  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
+}
+.red1 h2{
+  color: var(--bijela);
+  padding: 15px;
+}
+.red1 hr{
+  width: 90%;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 15px;
+  background-color: var(--bijela);
+}
+.red1 p{
+  width: 90%;
+  padding: 25px;
+  color: var(--minimalna);
 }
 
-.radovi-red1 .firma-info h2 {
-  font-size: 2rem;
+
+
+
+.footer {
+  width: 100%;
+  color: #f5f7ff;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(109, 134, 251, 0.18),
+      transparent 32%
+    ),
+    linear-gradient(180deg, #18213f 0%, #11182f 100%);
+}
+.footer__main {
+  padding: 4.5rem 1.5rem 3rem;
+}
+.footer__content {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(160px, 0.7fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+.footer__brand-block {
+  max-width: 440px;
+}
+.footer__brand {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
   color: #ffffff;
-  margin: 0;
+  margin-bottom: 0.9rem;
 }
-
-.radovi-red2 .firma-info h2 {
-  font-size: 2rem;
-  color: #1a1a2e;
-  margin: 0;
-}
-
-/* Gumbi */
-.radovi-red1 .btn-saznaj {
-  display: inline-block;
-  width: fit-content;
-  color: #ffffff;
-  border: 3px solid #ffffff;
-  border-radius: 12px;
-  padding: 12px 30px;
-  text-decoration: none;
+.footer__brand-text,
+.footer__connect-text {
   font-size: 1rem;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+  line-height: 1.75;
+  color: rgba(231, 236, 255, 0.74);
 }
-
-.radovi-red1 .btn-saznaj:hover {
-  background: #ffffff;
-  color: var(--red1);
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.4rem;
 }
-
-.radovi-red2 .btn-saznaj {
-  display: inline-block;
+.footer__link {
   width: fit-content;
-  color: var(--red1);
-  border: 3px solid var(--red1);
-  border-radius: 12px;
-  padding: 12px 30px;
+  color: rgba(245, 247, 255, 0.84);
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
 }
-
-.radovi-red2 .btn-saznaj:hover {
-  background: var(--red1);
+.footer__link:hover {
+  color: #8ea4ff;
+  transform: translateX(4px);
+}
+.footer__connect {
+  padding-top: 0.4rem;
+}
+.footer__title {
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #ffffff;
+  margin-bottom: 0.85rem;
 }
-
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.3rem;
+}
+.footer__social {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(183, 200, 255, 0.18);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+.footer__social:hover {
+  transform: translateY(-2px);
+  background: rgba(79, 110, 247, 0.3);
+  border-color: rgba(142, 164, 255, 0.6);
+}
+.footer__bottom {
+  padding: 1.1rem 1.5rem 1.25rem;
+  background: rgba(6, 10, 22, 0.48);
+  border-top: 1px solid rgba(183, 200, 255, 0.12);
+  text-align: center;
+}
+.footer__bottom p {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: rgba(231, 236, 255, 0.72);
+}
 /* ── Responzivnost ── */
 @media (max-width: 768px) {
-  .radovi-red1,
-  .radovi-red2 {
-    flex-direction: column;
-    padding: 32px 24px;
-    gap: 24px;
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .navbar__links {
+    display: none;
   }
 
-  /* Za red2 tekst je u HTML-u prije logotipa, ali vizualno želimo logo gore –
-     obrnemo redoslijed */
-  .radovi-red2 .logo-kartica {
-    order: -1;
+  .navbar__hamburger {
+    display: flex;
   }
-
-  .radovi-red1 .logo-kartica,
-  .radovi-red2 .logo-kartica {
-    flex: unset;
-    width: 140px;
-    height: 110px;
+ 
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
   }
-
-  .radovi-red1 .firma-info,
-  .radovi-red2 .firma-info {
-    align-items: center;
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .radovi-header {
+    min-height: 300px;
     text-align: center;
   }
-}
-/* ── Header dio stranice ── */
-@media  (max-width: 768px) {
-    .radovi-header h1 {
-        font-size: 4rem;
-    }
-}
 
-@media  (max-width: 500px) {
-    .radovi-header {
-        min-height: 300px;
-        text-align: center;
-    }
-
-    .radovi-header .overlay {
-        padding-left: 0;
-        justify-content: center;
-    }
-    .radovi-header h1 {
-        font-size: 2.5rem;
-    }
+  .radovi-header .overlay {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .radovi-header h1 {
+    font-size: 2.5rem;
+  }
 }

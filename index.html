@@ -3,8 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMVisual</title>
+    <title>BMVisual - Pocetna</title>
     <link rel="stylesheet" href="src/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/64x64.png"
+    />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -60,14 +78,18 @@
           <div class="dobrodosli__actions">
             <!--Gumb 1-->
             <a href="radovi.html" class="gumb1">
-              <span>☎️</span>
-              Kontaktiraj nas
-              <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
+              <span id="gumb1">☎️</span>
+              Kontaktiraj nas!
+              <span class="gumb-strelica" id="strelica" aria-hidden="true"
+                >&rarr;</span
+              >
             </a>
             <a href="radovi.html" class="gumb2">
-              <span>🔎</span>
-              Saznati vise
-              <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
+              <span id="gumb2">🔎</span>
+              Saznajte vise!
+              <span class="gumb-strelica" id="strelica" aria-hidden="true"
+                >&rarr;</span
+              >
             </a>
           </div>
         </div>
@@ -78,18 +100,15 @@
       <div class="pog_radove__content">
         <!--Tekst s gumbom-->
         <div class="pog_radove__intro">
-          <h2 class="pog_radove__title">Radovi i <span>refrence</span></h2>
-          <hr />
+          <h2 class="pog_radove__title">🖼️ Radovi i <span>refrence</span></h2>
+          <hr class="linija_tamna" />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Dignissimos et cum rem libero. Eos esse, ipsam necessitatibus quia
             eaque voluptatum, doloremque cumque dicta impedit, similique numquam
             quas ipsa ad pariatur.
           </p>
-          <a href="radovi.html" class="gumb1">
-            <span>🔎</span>Saznajte vise!
-            <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
-          </a>
+          <a href="radovi.html" class="gumb3"> Drugi radovi! </a>
         </div>
         <!--Galerija radova-->
         <div class="pog_radove__gallery" aria-label="Primjeri radova">
@@ -109,39 +128,42 @@
     </div>
     <!--Usluge sekijca-->
     <div class="usluge">
-      <h1>Nase usluge</h1>
-      <hr />
+      <section class="usluge-naslov">
+        <h1>Nase usluge</h1>
+        <hr />
+      </section>
+
       <!--Red 1-->
       <section class="usluge_red">
-        <div class="usluge_card" data-label="1">
+        <div class="usluge_card" id="usluga1" data-label="1">
           <div class="usluge_card__left">
             <span class="usluge_ikona">📷</span>
             <span class="usluge_naziv">Usluga 1</span>
           </div>
           <button class="usluge_card__plus">+</button>
         </div>
-        <div class="usluge_card" data-label="2">
+        <div class="usluge_card" id="usluga2" data-label="2">
           <div class="usluge_card__left">
             <span class="usluge_ikona">📷</span>
             <span class="usluge_naziv">Usluga 2</span>
           </div>
           <button class="usluge_card__plus">+</button>
         </div>
-        <div class="usluge_card" data-label="3">
+        <div class="usluge_card" id="usluga3" data-label="3">
           <div class="usluge_card__left">
             <span class="usluge_ikona">📷</span>
             <span class="usluge_naziv">Usluga 3</span>
           </div>
           <button class="usluge_card__plus">+</button>
         </div>
-        <div class="usluge_card" data-label="4">
+        <div class="usluge_card" id="usluga4" data-label="4">
           <div class="usluge_card__left">
             <span class="usluge_ikona">📷</span>
             <span class="usluge_naziv">Usluga 1</span>
           </div>
           <button class="usluge_card__plus">+</button>
         </div>
-        <div class="usluge_card" data-label="5">
+        <div class="usluge_card" id="usluga5" data-label="5">
           <div class="usluge_card__left">
             <span class="usluge_ikona">📷</span>
             <span class="usluge_naziv">Usluga 2</span>
@@ -187,12 +209,17 @@
     </div>
     <!--Naruci sekcija-->
     <div class="naruci">
-      <h1>KONTAKTIRAJ NAS I <span class="kontrast">NARUČI SVOJ LOGOTIP</span> ODMAH!</h1>
-      <a href="radovi.html" class="gumb1">
-        <span>☎️</span>
-        Kontaktiraj nas
-        <span class="gumb-strelica" aria-hidden="true">&rarr;</span>
-      </a>
+      <div class="naruci-content">
+        <h1>Kontaktiraj <span>nas!</span></h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure
+          deleniti tempore natus obcaecati, est eius alias libero facere,
+          sapiente quos quaerat eligendi in consequatur dolores asperiores
+          cumque minus enim.
+        </p>
+        <a href="kontakt.html" class="gumb1">Kontaktiraj nas!</a>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer__main">
@@ -212,7 +239,7 @@
           </nav>
 
           <div class="footer__connect">
-            <h3 class="footer__title">Upoznaj nas</h3>
+            <h3 class="footer__title">Kontakti</h3>
             <p class="footer__connect-text">
               Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
               projektu.
@@ -227,7 +254,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>Sva prava pridrzana...</p>
+        <p>BMVisual 2026</p>
         <p>Web stranicu izradio: Ivan Mihael Zec</p>
       </div>
     </footer>
