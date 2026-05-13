@@ -25,7 +25,6 @@
     />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar__brand">
         <img src="src/assets/logo.jpeg" alt="Logo firem BMVisual" />
@@ -63,52 +62,43 @@
         </ul>
       </div>
     </nav>
-    <!--Dobrodosli sekcija-->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
     <div class="dobrodosli">
-      <div class="dobrodosli__overlay">
-        <div class="dobrodosli__content">
-          <h1 class="dobrodosli__title">👋 Dobrodošli!</h1>
-          <hr />
-          <p class="dobrodosli__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea
-            fugit nesciunt quis fuga eius quam natus molestias vero, autem,
-            aperiam sint inventore harum, dolorum doloribus atque id culpa
-            totam?
-          </p>
-          <div class="dobrodosli__actions">
-            <!--Gumb 1-->
-            <a href="radovi.html" class="gumb1">
-              <span id="gumb1">☎️</span>
-              Kontaktiraj nas!
-              <span class="gumb-strelica" id="strelica" aria-hidden="true"
-                >&rarr;</span
-              >
-            </a>
-            <a href="radovi.html" class="gumb2">
-              <span id="gumb2">🔎</span>
-              Saznajte vise!
-              <span class="gumb-strelica" id="strelica" aria-hidden="true"
-                >&rarr;</span
-              >
-            </a>
-          </div>
-        </div>
+      <div class="content">
+        <section class="tel">
+          <a href="#"><span>📞</span> 0911234567</a>
+        </section>
+        <h1>Dobro<span>dosli!</span></h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+          obcaecati deleniti culpa nihil explicabo quibusdam, veritatis
+          dignissimos, asperiores architecto commodi officiis eius magni, hic
+          exercitationem dicta necessitatibus deserunt laboriosam? Quasi!
+        </p>
+        <section class="gumbi">
+          <button class="gumb4">Saznajte vise!</button>
+        </section>
       </div>
     </div>
-    <!--Link na stranicu s radovima-->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
     <div class="pog_radove">
       <div class="pog_radove__content">
         <!--Tekst s gumbom-->
         <div class="pog_radove__intro">
-          <h2 class="pog_radove__title">🖼️ Radovi i <span>refrence</span></h2>
-          <hr class="linija_tamna" />
+          <h2 class="pog_radove__title">Radovi & <span>refrence</span></h2>
+          <hr />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Dignissimos et cum rem libero. Eos esse, ipsam necessitatibus quia
             eaque voluptatum, doloremque cumque dicta impedit, similique numquam
             quas ipsa ad pariatur.
           </p>
-          <a href="radovi.html" class="gumb3"> Drugi radovi! </a>
+          <a href="radovi.html" class="gumb4"> Drugi radovi! </a>
         </div>
         <!--Galerija radova-->
         <div class="pog_radove__gallery" aria-label="Primjeri radova">
@@ -126,60 +116,179 @@
         </div>
       </div>
     </div>
-    <!--Usluge sekijca-->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
+    <!-------------------------------------------------------->
     <div class="usluge">
       <section class="usluge-naslov">
-        <h1>Nase usluge</h1>
+        <h1>Nase <span>usluge</span></h1>
         <hr />
       </section>
-
-      <!--Red 1-->
       <section class="usluge_red">
+        <!--Usluga 1-->
         <div class="usluge_card" id="usluga1" data-label="1">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s1.svg" alt="" srcset="" />
+            </span>
             <span class="usluge_naziv">Usluga 1</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga1">
+            +
+          </button>
+          <div id="modal-usluga1" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 1</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
+        <!--Usluga 2-->
         <div class="usluge_card" id="usluga2" data-label="2">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s4.svg" alt="" srcset=""
+            /></span>
             <span class="usluge_naziv">Usluga 2</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga2">
+            +
+          </button>
+          <div id="modal-usluga2" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 2</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
+        <!--Usluga 3-->
         <div class="usluge_card" id="usluga3" data-label="3">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s5.svg" alt=""
+            /></span>
             <span class="usluge_naziv">Usluga 3</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga3">
+            +
+          </button>
+          <div id="modal-usluga3" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 3</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
+        <!--Usluga 4-->
         <div class="usluge_card" id="usluga4" data-label="4">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
-            <span class="usluge_naziv">Usluga 1</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s1.svg" alt=""
+            /></span>
+            <span class="usluge_naziv">Usluga 4</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga4">
+            +
+          </button>
+          <div id="modal-usluga4" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 4</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
+        <!--Usluga 5-->
         <div class="usluge_card" id="usluga5" data-label="5">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
-            <span class="usluge_naziv">Usluga 2</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s4.svg" alt="" srcset=""
+            /></span>
+            <span class="usluge_naziv">Usluga 5</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga5">
+            +
+          </button>
+          <div id="modal-usluga5" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 5</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="usluge_card" data-label="6">
+        <!--Usluga 6-->
+        <div class="usluge_card" id="usluga6" data-label="6">
           <div class="usluge_card__left">
-            <span class="usluge_ikona">📷</span>
-            <span class="usluge_naziv">Usluga 3</span>
+            <span class="usluge_ikona"
+              ><img src="src/assets/usluga_s5.svg" alt="" srcset=""
+            /></span>
+            <span class="usluge_naziv">Usluga 6</span>
           </div>
-          <button class="usluge_card__plus">+</button>
+          <button class="usluge_card__plus" data-modal-target="modal-usluga6">
+            +
+          </button>
+          <div id="modal-usluga6" class="usluge-modal" aria-hidden="true">
+            <div class="modal-content">
+              <span class="zatvori" role="button" aria-label="Close modal"
+                >&times;</span
+              >
+              <h2>Usluga 6</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Veritatis, nulla quaerat accusamus modi sapiente doloribus
+                magnam quasi repellendus impedit debitis ea, temporibus ipsa
+                incidunt reiciendis nesciunt eligendi iusto quod? Fuga.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
-    <!--O nama -->
     <div class="about">
       <div class="about__content">
         <div class="about__slika">
@@ -207,7 +316,6 @@
         </div>
       </div>
     </div>
-    <!--Naruci sekcija-->
     <div class="naruci">
       <div class="naruci-content">
         <h1>Kontaktiraj <span>nas!</span></h1>
@@ -261,4 +369,5 @@
   </body>
 
   <script src="src/navbar.js" defer></script>
+  <script src="src/usluge_modal.js" defer></script>
 </html>
