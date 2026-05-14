@@ -25,10 +25,10 @@
     />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!----------------Navigacija------------------------------>
     <nav class="navbar">
       <div class="navbar__brand">
-        <img src="src/assets/logo.jpeg" alt="Logo firem BMVisual" />
+        <img src="src/assets/64x64.png" alt="Logo firem BMVisual" />
       </div>
       <!--NORMALNA NAVIGACIJA-->
       <ul class="navbar__links" id="navLinks">
@@ -59,7 +59,7 @@
         <ul class="nav-overlay__links">
           <li><a href="index.html" class="nav-overlay__link">Pocetna</a></li>
           <li>
-            <a href="#" class="nav-overlay__link active">Radovi</a>
+            <a href="radovi.html" class="nav-overlay__link active">Radovi</a>
           </li>
           <li><a href="kontakt.html" class="nav-overlay__link">Kontakt</a></li>
         </ul>
@@ -67,51 +67,77 @@
     </nav>
     <!--Header-->
     <div class="radovi-header">
-      <div class="overlay">
+      <div class="content">
         <h1 class="r-h1">NASI</h1>
         <hr />
         <h1 class="r-h2">RADOVI</h1>
       </div>
     </div>
-    <!--Radovi-->
+    <!--Rad 1-->
     <div class="red1">
-      <section class="red1-slika">
-        <img src="src/assets/logo.jpeg" alt="" srcset="" />
+      <section class="red-slika">
+        <img src="src/assets/radovi2.png" alt="" srcset="" />
       </section>
       <article>
-        <h2>Rad 1</h2>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus
-          soluta iure necessitatibus quisquam sed ipsam dignissimos repellendus
-          sequi tenetur laboriosam corporis ad harum unde distinctio omnis, ab
-          doloribus ea.
-        </p>
+        <section class="red-text">
+          <h2>Rad 1</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+            minus soluta iure necessitatibus quisquam sed ipsam dignissimos
+            repellendus sequi tenetur laboriosam corporis ad harum unde
+            distinctio omnis, ab doloribus ea.
+          </p>
+        </section>
       </article>
     </div>
-    <div class="red1">
-      <article>
-        <h2>Rad 2</h2>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus
-          soluta iure necessitatibus quisquam sed ipsam dignissimos repellendus
-          sequi tenetur laboriosam corporis ad harum unde distinctio omnis, ab
-          doloribus ea.
-        </p>
-      </article>
-      <section class="red1-slika">
-        <img src="src/assets/logo.jpeg" alt="" srcset="" />
+    <!--Rad 2-->
+    <div class="red2">
+      <section class="red-slika">
+        <img src="src/assets/radovi1.png" alt="" srcset="" />
       </section>
+      <article>
+        <section class="red-text">
+          <h2>Rad 1</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+            minus soluta iure necessitatibus quisquam sed ipsam dignissimos
+            repellendus sequi tenetur laboriosam corporis ad harum unde
+            distinctio omnis, ab doloribus ea.
+          </p>
+        </section>
+      </article>
     </div>
     <!--Galerija slika-->
-    <div></div>
+    <div class="galerija">
+      <section class="galerija-naslov">
+        <h1>Galerija <span>radova</span></h1>
+        <hr />
+      </section>
+      <div class="galerija-main">
+        <section class="galerija-track">
+          <div class="galerija-kartica">
+            <img src="src/assets/logo.jpeg" alt="" srcset="" />
+          </div>
+          <div class="galerija-kartica">
+            <img src="src/assets/radovi1.png" alt="" srcset="" />
+          </div>
+          <div class="galerija-kartica">
+            <img src="src/assets/radovi2.png" alt="" srcset="" />
+          </div>
+          <div class="galerija-kartica">
+            <img src="src/assets/radovi3.png" alt="" srcset="" />
+          </div>
+        </section>
+      </div>
+    </div>
     <!--Footer-->
     <footer class="footer">
       <div class="footer__main">
         <div class="footer__content">
           <div class="footer__brand-block">
-            <h2 class="footer__brand">BrandName</h2>
+            <h2 class="footer__brand">BMVisual</h2>
             <p class="footer__brand-text">
               Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan
               dojam.
@@ -119,17 +145,12 @@
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigacija">
-            <a href="#" class="footer__link">Pocetna</a>
+            <a href="index.html" class="footer__link">Pocetna</a>
             <a href="radovi.html" class="footer__link">Radovi</a>
             <a href="kontakt.html" class="footer__link">Kontakt</a>
           </nav>
-
           <div class="footer__connect">
             <h3 class="footer__title">Kontakti</h3>
-            <p class="footer__connect-text">
-              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
-              projektu.
-            </p>
             <div class="footer__socials" aria-label="Društvene mreže">
               <a href="#" class="footer__social">In</a>
               <a href="#" class="footer__social">Ig</a>

@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Page</title>
-    <link rel="stylesheet" href="src/index.css" />
+    <title>BMVisual - Kontakt</title>
     <link rel="stylesheet" href="src/kontakt.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!----------------Navigacija------------------------------>
     <nav class="navbar">
       <div class="navbar__brand">
-        <span class="navbar__brand-name">BrandName</span>
+        <img src="src/assets/64x64.png" alt="Logo firem BMVisual" />
       </div>
+      <!--NORMALNA NAVIGACIJA-->
       <ul class="navbar__links" id="navLinks">
         <li><a href="index.html" class="navbar__link">Pocetna</a></li>
         <li><a href="radovi.html" class="navbar__link">Radovi</a></li>
-        <li><a href="kontakt.html" class="navbar__link navbar__link active" >Kontakt</a></li>
+        <li><a href="kontakt.html" class="navbar__link active">Kontakt</a></li>
       </ul>
-
+      <!--HAMBURGER MENU-->
       <button
         class="navbar__hamburger"
         id="hamburgerBtn"
@@ -41,19 +41,22 @@
         <ul class="nav-overlay__links">
           <li><a href="index.html" class="nav-overlay__link">Pocetna</a></li>
           <li><a href="radovi.html" class="nav-overlay__link">Radovi</a></li>
-          <li><a href="kontakt.html" class="nav-overlay__link active">Kontakt</a></li>
+          <li>
+            <a href="kontakt.html" class="nav-overlay__link active">Kontakt</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <section class="kontakt-header">
-        <section class="overlay">
-            <h1>KONTAKTIRAJ<br><span>NAS</span>
-            </h1>
-
-        </section>
-    </section>
+    <!--Header-->
+    <div class="kontakt-header">
+      <div class="content">
+        <h1 class="r-h1">KONTAKTIRAJ</h1>
+        <hr />
+        <h1 class="r-h2">NAS!</h1>
+      </div>
+    </div>
     <!--Kontakt forma-->
-    <div class="kontakt">
+    <!--<div class="kontakt">
       <div class="kontakt__inner">
         <div class="kontakt__intro">
           <h1 class="kontakt__title">Contact Us</h1>
@@ -145,13 +148,14 @@
           </a>
         </div>
       </div>
-    </div>
+    </div>-->
+
     <!--Footer-->
     <footer class="footer">
       <div class="footer__main">
         <div class="footer__content">
           <div class="footer__brand-block">
-            <h2 class="footer__brand">BrandName</h2>
+            <h2 class="footer__brand">BMVisual</h2>
             <p class="footer__brand-text">
               Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan
               dojam.
@@ -159,18 +163,12 @@
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigacija">
-            <a href="index.html" class="footer__link">Pocetna
-            </a>
+            <a href="index.html" class="footer__link">Pocetna</a>
             <a href="radovi.html" class="footer__link">Radovi</a>
-            <a href="#" class="footer__link">Kontakt</a>
+            <a href="kontakt.html" class="footer__link">Kontakt</a>
           </nav>
-
           <div class="footer__connect">
-            <h3 class="footer__title">Upoznaj nas</h3>
-            <p class="footer__connect-text">
-              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
-              projektu.
-            </p>
+            <h3 class="footer__title">Kontakti</h3>
             <div class="footer__socials" aria-label="Društvene mreže">
               <a href="#" class="footer__social">In</a>
               <a href="#" class="footer__social">Ig</a>
@@ -181,7 +179,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>Sva prava pridrzana...</p>
+        <p>BMVisual 2026</p>
         <p>Web stranicu izradio: Ivan Mihael Zec</p>
       </div>
     </footer>

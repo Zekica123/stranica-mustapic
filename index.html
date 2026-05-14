@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMVisual - Pocetna</title>
-    <link rel="stylesheet" href="src/index.css?ver=3" />
+    <link rel="stylesheet" href="src/index.css" />
     <link
       rel="icon"
       type="image/png"
@@ -25,9 +25,10 @@
     />
   </head>
   <body>
+    <!----------------Navigacija------------------------------>
     <nav class="navbar">
       <div class="navbar__brand">
-        <img src="src/assets/logo.jpeg" alt="Logo firem BMVisual" />
+        <img src="src/assets/64x64.png" alt="Logo firem BMVisual" />
       </div>
       <!--NORMALNA NAVIGACIJA-->
       <ul class="navbar__links" id="navLinks">
@@ -62,9 +63,7 @@
         </ul>
       </div>
     </nav>
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
+    <!----------------Dobrodosli------------------------------>
     <div class="dobrodosli">
       <div class="content">
         <section class="tel">
@@ -83,12 +82,9 @@
         </section>
       </div>
     </div>
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
+    <!----------------Radovi---------------------------------->
     <div class="pog_radove">
       <div class="pog_radove__content">
-        <!--Tekst s gumbom-->
         <div class="pog_radove__intro">
           <h2 class="pog_radove__title">Radovi & <span>refrence</span></h2>
           <hr />
@@ -100,7 +96,6 @@
           </p>
           <a href="radovi.html" class="gumb4"> Drugi radovi! </a>
         </div>
-        <!--Galerija radova-->
         <div class="pog_radove__gallery" aria-label="Primjeri radova">
           <div class="pog_radove_track">
             <a href="radovi.html#rad1" class="radovi_card" data-label="Firma A">
@@ -116,9 +111,7 @@
         </div>
       </div>
     </div>
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
-    <!-------------------------------------------------------->
+    <!-----------------Usluge----------------------------------->
     <div class="usluge">
       <section class="usluge-naslov">
         <h1>Nase <span>usluge</span></h1>
@@ -289,13 +282,16 @@
         </div>
       </section>
     </div>
+    <!-------------------------------------------------------->
+    <!-----------------O nama--------------------------------->
+    <!-------------------------------------------------------->
     <div class="about">
       <div class="about__content">
         <div class="about__slika">
           <img src="src/assets/onama.jpg" alt="O nama" />
         </div>
         <div class="about__text">
-          <h3>Upoznaj nas!</h3>
+          <h2>Upoznaj <span>nas!</span></h2>
           <hr />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsa
@@ -316,6 +312,7 @@
         </div>
       </div>
     </div>
+    <!---------------Kontakt------------------------------------>
     <div class="naruci">
       <div class="naruci-content">
         <h1>Kontaktiraj <span>nas!</span></h1>
@@ -326,14 +323,17 @@
           sapiente quos quaerat eligendi in consequatur dolores asperiores
           cumque minus enim.
         </p>
-        <a href="kontakt.html" class="gumb1">Kontaktiraj nas!</a>
+        <section class="naruci-gumbi">
+          <a href="kontakt.html" class="gumb4">Kontaktiraj nas!</a>
+        </section>
       </div>
     </div>
+    <!--Footer-->
     <footer class="footer">
       <div class="footer__main">
         <div class="footer__content">
           <div class="footer__brand-block">
-            <h2 class="footer__brand">BrandName</h2>
+            <h2 class="footer__brand">BMVisual</h2>
             <p class="footer__brand-text">
               Dizajn, web i vizualna rješenja koja ostavljaju uredan i moderan
               dojam.
@@ -341,17 +341,12 @@
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigacija">
-            <a href="#" class="footer__link">Pocetna</a>
+            <a href="index.html" class="footer__link">Pocetna</a>
             <a href="radovi.html" class="footer__link">Radovi</a>
             <a href="kontakt.html" class="footer__link">Kontakt</a>
           </nav>
-
           <div class="footer__connect">
             <h3 class="footer__title">Kontakti</h3>
-            <p class="footer__connect-text">
-              Javi se za suradnju, pregled radova ili ponudu prilagođenu tvom
-              projektu.
-            </p>
             <div class="footer__socials" aria-label="Društvene mreže">
               <a href="#" class="footer__social">In</a>
               <a href="#" class="footer__social">Ig</a>

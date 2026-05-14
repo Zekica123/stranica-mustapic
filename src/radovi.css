@@ -4,6 +4,7 @@
   padding: 0;
 }
 :root {
+  --tamnax2: #093c5d;
   --tamna: #3674b5;
   --srednja: #578fca;
   --svjetla: #a1e3f9;
@@ -23,60 +24,34 @@
     var(--tamna)
   );
 }
-.gumb1,
-.gumb2 {
-  display: inline-flex;
-  align-items: center;
-  text-transform: uppercase;
-  justify-content: space-between;
-  min-width: 40%;
-  gap: 1rem;
-  padding: 20px 25px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  text-decoration: none;
+.gumb4 {
+  background-color: var(--bijela);
+  color: var(--tamna);
+  border-radius: 10em;
+  font-size: 15px;
   font-weight: 700;
-  transition:
-    background 0.2s,
-    border-color 0.2s,
-    transform 0.2s,
-    box-shadow 0.2s;
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.gumb3 {
-  text-decoration: none;
-  background-color: var(--tamna);
-  color: var(--bijela);
-  border-radius: 6px;
-  border-width: 0;
-  box-shadow:
-    rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.1) 0 2px 5px 0,
-    rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-size: 1.1rem;
-  outline: none;
-  overflow: hidden;
   padding: 20px 25px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  width: 100%;
-  border-bottom: 5px solid var(--svjetla);
-  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--crna);
+  box-shadow: 0 0 0 0 black;
+}
+.gumb4:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+.gumb4:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
 }
 h1 {
-  font-size: 6rem;
+  font-size: 4.5rem;
 }
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 p {
   font-size: 1.3rem;
@@ -87,13 +62,22 @@ body {
   background: #f5f6fa;
   color: #222;
 }
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-Navigacija-*/
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  height: 64px;
-  background: #fff;
+  padding: 25px;
+  width: 100%;
+  background: var(--bijela);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -118,17 +102,6 @@ body {
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite;
 }
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 .navbar__brand {
   display: flex;
   align-items: center;
@@ -136,23 +109,23 @@ body {
   text-decoration: none;
 }
 .navbar__brand img {
-  max-width: 400px;
-  max-height: 150px;
+  height: 50px;
+  max-width: 150px;
   border-radius: 6px;
-  object-fit: cover;
+  object-fit: contain;
 }
 /* Desktop links */
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   list-style: none;
 }
 .navbar__link {
   cursor: pointer;
   display: block;
-  padding: 15px 25px;
-  font-size: 1.1rem;
+  padding: 15px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--crna);
   text-decoration: none;
@@ -162,12 +135,11 @@ body {
     color 0.18s;
 }
 .navbar__link:hover {
-  background: var(--srednja);
-  color: var(--bijela);
+  color: var(--tamna);
 }
 .navbar__link.active {
-  background: var(--srednja);
-  color: var(--bijela);
+  color: var(--tamna);
+  text-decoration: underline;
 }
 .navbar__hamburger {
   display: none;
@@ -209,8 +181,6 @@ body {
   justify-content: center;
   gap: 1.5rem;
   z-index: 200;
-
-  /* Hidden by default */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -223,7 +193,7 @@ body {
   position: absolute;
   top: 1.25rem;
   right: 1.5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1;
   color: #fff;
   background: none;
@@ -233,11 +203,9 @@ body {
   border-radius: 4px;
   transition: color 0.18s;
 }
-
 .nav-overlay__close:hover {
-  color: #4f6ef7;
+  color: var(--tamna);
 }
-
 .nav-overlay__links {
   list-style: none;
   display: flex;
@@ -260,10 +228,13 @@ body {
 }
 .nav-overlay__link:hover,
 .nav-overlay__link.active {
-  color: #4f6ef7;
-  background: rgba(79, 110, 247, 0.12);
+  color: var(--svjetla);
+  text-decoration: underline;
 }
-/*-----------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
 /*-HEADER-*/
 .radovi-header {
   position: relative;
@@ -271,92 +242,231 @@ body {
   min-height: 500px;
   background-image: url("slike/radovi_s1.jpg");
   background-size: cover;
-  background-position: center;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(26, 26, 46,0.9);
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  padding-left: 50px;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 10px solid var(--crna);
 }
 .radovi-header::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--gradijent_main);
+  opacity: 0.6;
+  z-index: 1;
+}
+.radovi-header .content {
+  position: relative;
+  width: 90%;
+  height: auto;
+  padding: 50px;
+  border-radius: 10px;
+  z-index: 2;
+  background: var(--bijela);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.r-h1 {
+  color: var(--crna);
+  font-size: 7rem;
+}
+.radovi-header hr {
   height: 15px;
-  background: var(--gradijent5);
+  width: 80%;
+  min-width: 80%;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 0;
+  background: var(--gradijent_main);
   background-size: 400% 400%;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   animation: gradientMove 8s ease infinite;
 }
-.r-h1 {
-  padding-top: 50px;
-  color: var(--svjetla);
-}
-.radovi-header hr {
-  width: 60%;
-  height: 15px;
-  background: var(--gradijent5);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: 0;
-  border-radius: 10px;
-}
 .r-h2 {
-  color: var(--bijela);
-  padding-bottom: 100px;
+  color: var(--tamna);
+  font-size: 7rem;
 }
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
 /* ── Redovi radova ── */
-.red1{
+.red1,
+.red2 {
   height: 500px;
   width: 100%;
-  background: var(--gradijent1);
   display: flex;
   flex-direction: row;
+  border-bottom: 5px solid var(--bijela);
 }
-.red1-slika{
+.red1 {
+  background: var(--gradijent3);
+  background-size: 400% 400%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  animation: gradientMove 8s ease infinite;
+}
+.red2 {
+  flex-direction: row-reverse;
+  background: var(--gradijent2);
+  background-size: 400% 400%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  animation: gradientMove 8s ease infinite;
+}
+.red-slika {
   flex: 0 0 50%;
   height: 100%;
+  padding: 25px 0;
+  background: rgba(255, 255, 255, 0.15);
 }
-.red1-slika img{
+.red-slika img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
-.red1 article, .red2 article{
+.red1 article,
+.red2 article {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.red1 h2{
-  color: var(--bijela);
-  padding: 15px;
+.red1 article {
+  border-left: 2px solid var(--crna);
 }
-.red1 hr{
+.red2 article {
+  border-right: 2px solid var(--crna);
+}
+.red-text {
+  background: rgba(255, 255, 255, 0.25);
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.red-text h2 {
+  padding: 15px;
+  color: var(--bijela);
+}
+.red-text hr {
   width: 90%;
   height: 10px;
   border-radius: 10px;
   margin-left: 15px;
   background-color: var(--bijela);
 }
-.red1 p{
+.red-text p {
   width: 90%;
   padding: 25px;
-  color: var(--minimalna);
+  color: var(--bijela);
 }
-
-
-
-
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--Izdvojeni radovi-*/
+.galerija {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--tamna),
+    var(--tamna) 20px,
+    var(--tamnax2) 20px,
+    var(--tamnax2) 40px
+  );
+  position: relative;
+  border-bottom: 10px solid var(--crna);
+}
+.galerija-naslov {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: var(--bijela);
+  border-radius: 10px;
+}
+.galerija-naslov h1 {
+  text-align: center;
+}
+.galerija-naslov h1 span {
+  color: var(--tamna);
+}
+.galerija-naslov hr {
+  height: 10px;
+  width: 60%;
+  margin: 15px auto;
+  border-radius: 5px;
+  border: 0;
+  background: var(--gradijent_main);
+  background-size: 400% 400%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  animation: gradientMove 8s ease infinite;
+}
+.galerija-main {
+  margin: 50px auto;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+.galerija-track {
+  display: flex; /* Omogućuje poravnanje kartica u red */
+  overflow-x: auto; /* Aktivira horizontalni scroll */
+  overflow-y: hidden; /* Sprječava vertikalni scroll */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  gap: 20px; /* Razmak između kartica */
+  padding: 50px 0;
+  padding-left: 15px;
+  padding-bottom: 20px; /* Prostor za scrollbar da ne dodiruje kartice */
+  scroll-behavior: smooth; /* Glatko skrolanje */
+  -webkit-overflow-scrolling: touch; /* Glatko skrolanje na iOS uređajima */
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.galerija-track::-webkit-scrollbar {
+  height: 15px;
+}
+.galerija-track::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+.galerija-track::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--svjetla);
+}
+.galerija-track {
+  scrollbar-width: 100%;
+}
+.galerija-kartica {
+  text-decoration: none;
+  position: relative;
+  flex: 0 0 40%;
+  display: inline-block;
+  padding: 25px 0;
+  max-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+.galerija-kartica img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
 .footer {
   width: 100%;
   color: #f5f7ff;
@@ -466,8 +576,96 @@ body {
   line-height: 1.7;
   color: rgba(231, 236, 255, 0.72);
 }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media (max-width: 850px) {
+  .radovi-header .content {
+    width: 80%;
+  }
+  .r-h1,
+  .r-h2 {
+    font-size: 6rem;
+  }
+  .red1,
+  .red2 {
+    display: flex;
+    flex-direction: column-reverse;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 25px 0;
+  }
+  .red-slika {
+    flex: unset;
+    width: 80%;
+    margin: 25px auto;
+    border-radius: 10px;
+    height: 250px;
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .red1 article,
+  .red2 article {
+    flex: unset;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .red1 article,
+  .red2 article {
+    border: none;
+  }
+  .red-text {
+    background: rgba(255, 255, 255, 0.25);
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .red-text h2 {
+    text-align: center;
+    padding: 20px;
+    color: var(--bijela);
+  }
+  .red-text hr {
+    width: 90%;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 0;
+    margin: 0 auto;
+    background-color: var(--bijela);
+  }
+  .red-text p {
+    text-align: justify;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+  }
+}
 /* ── Responzivnost ── */
 @media (max-width: 768px) {
+  .r-h1,
+  .r-h2 {
+    font-size: 5rem;
+  }
+  .radovi-header hr {
+    height: 10px;
+  }
   h1 {
     font-size: 3.5rem;
   }
@@ -483,11 +681,71 @@ body {
   .navbar__links {
     display: none;
   }
-
   .navbar__hamburger {
     display: flex;
   }
- 
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--Izdvojeni radovi-*/
+  .galerija {
+    padding: 50px 0;
+  }
+  .galerija-naslov {
+    width: 80%;
+    padding: 25px;
+  }
+  .galerija-naslov hr {
+    height: 10px;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .galerija-main {
+    margin: 25px auto;
+  }
+  .galerija-track {
+    gap: 20px; /* Razmak između kartica */
+    padding: 25px 0;
+    padding-left: 15px;
+  }
+  .galerija-track::-webkit-scrollbar {
+    height: 10px;
+  }
+  .galerija-kartica {
+    flex: 0 0 60%;
+    padding: 20px 0;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  .footer__main {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer__nav {
+    gap: 0.85rem;
+  }
+
+  .footer__link {
+    font-size: 1.05rem;
+  }
+
+  .footer__bottom {
+    padding: 1rem;
+  }
 }
 @media (max-width: 500px) {
   h1 {
@@ -506,12 +764,83 @@ body {
     min-height: 300px;
     text-align: center;
   }
-
-  .radovi-header .overlay {
-    padding-left: 0;
-    justify-content: center;
+  .radovi-header .content {
+    width: 90%;
+    text-align: center;
   }
-  .radovi-header h1 {
-    font-size: 2.5rem;
+  .r-h1,
+  .r-h2 {
+    font-size: 3rem;
+  }
+  .radovi-header hr {
+    width: 100%;
+    height: 5px;
+    margin: 0 auto;
+  }
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  .red1,
+  .red2 {
+    padding: 20px 0;
+  }
+  .red-slika {
+    width: 90%;
+    margin: 20px auto;
+    height: 200px;
+  }
+  .red1 article,
+  .red2 article {
+    width: 90%;
+  }
+  .red-text h2 {
+    text-align: center;
+    padding: 15px;
+    color: var(--bijela);
+  }
+  .red-text hr {
+    width: 90%;
+    height: 5px;
+  }
+  .red-text p {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    padding: 15px;
+  }
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /*--Izdvojeni radovi-*/
+  .galerija {
+    padding: 25px 0;
+    border-bottom: 5px solid var(--crna);
+  }
+  .galerija-naslov {
+    width: 90%;
+    padding: 20px;
+  }
+  .galerija-naslov hr {
+    height: 5px;
+    width: 90%;
+  }
+  .galerija-main {
+    margin: 20px auto;
+  }
+  .galerija-track {
+    gap: 15px; /* Razmak između kartica */
+    padding: 20px 0;
+    padding-left: 15px;
+  }
+  .galerija-track::-webkit-scrollbar {
+    height: 10px;
+  }
+  .galerija-kartica {
+    flex: 0 0 80%;
+    padding: 20px 0;
+    max-height: 250px;
+    border-radius: 10px;
   }
 }
