@@ -286,166 +286,166 @@ body {
   color: var(--tamna);
   font-size: 7rem;
 }
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-Forma-*/
 .kontakt {
   width: 100%;
-  padding: clamp(48px, 7vw, 96px) 1rem;
-  background:
-    radial-gradient(circle at 12% 8%, #d8f2f7 0%, #f7f9fb 42%),
-    linear-gradient(180deg, #fdfefe 0%, #eef4f8 100%);
-}
-
-.kontakt__inner {
-  width: min(980px, 100%);
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e8eef2;
-  border-radius: 24px;
-  padding: clamp(22px, 4vw, 42px);
-  box-shadow: 0 24px 60px rgba(18, 36, 51, 0.09);
-}
-
-.kontakt__intro {
-  text-align: center;
-  margin-bottom: 1.25rem;
-}
-
-.kontakt__title {
-  font-size: clamp(1.9rem, 3.5vw, 2.65rem);
-  letter-spacing: -0.02em;
-  color: var(--kontakt-text);
-}
-
-.kontakt__subtitle {
-  margin-top: 0.45rem;
-  color: var(--kontakt-muted);
-  font-size: 0.98rem;
-}
-
-.kontakt__form {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.4rem;
-}
-
-.kontakt__field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.kontakt__field span {
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: var(--kontakt-text);
-}
-
-.kontakt__field input {
-  width: 100%;
-  border: 1px solid var(--kontakt-border);
-  background: var(--kontakt-surface);
-  border-radius: 999px;
-  padding: 0.82rem 1rem;
-  color: var(--kontakt-text);
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.kontakt__field input:focus {
-  outline: none;
-  border-color: var(--kontakt-accent);
-  background: #fff;
-  box-shadow: 0 0 0 4px rgba(45, 179, 201, 0.12);
-}
-
-.kontakt__submit {
-  grid-column: 1 / -1;
-  border: 0;
-  border-radius: 999px;
-  padding: 0.85rem 1.4rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-  background: linear-gradient(90deg, var(--kontakt-accent) 0%, #22bfd9 100%);
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.kontakt__submit:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(26, 143, 164, 0.26);
-  background: linear-gradient(
-    90deg,
-    var(--kontakt-accent-dark) 0%,
-    var(--kontakt-accent) 100%
+  padding: 100px 50px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--tamna),
+    var(--tamna) 20px,
+    var(--tamnax2) 20px,
+    var(--tamnax2) 40px
   );
+  position: relative;
+  border-bottom: 10px solid var(--crna);
+  position: relative;
 }
-
-.kontakt__options {
-  margin-top: 1.6rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
+.kontakt .content {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: var(--bijela);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
-
-.kontakt-card {
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  background: var(--kontakt-card);
-  border: 1px solid #e3ebf0;
-  border-radius: 18px;
-  padding: 1rem 0.85rem 1.15rem;
+.kontakt form {
+  padding: 25px;
+  flex: 0 0 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #396afc;
+  background: linear-gradient(to right, #005c97, #363795);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.kontakt form .descr,
+.kontakt .drustvene .descr {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--bijela);
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+.kontakt form hr {
+  width: 50%;
+  height: 5px;
+  background-color: var(--bijela);
+  border-radius: 10px;
+}
+.input,
+textarea {
+  margin: 1em 0 1em 0;
+  width: 50%;
+  position: relative;
+}
+.input input,
+textarea {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  border-radius: none;
+  width: 100%;
+  resize: none;
+}
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  color: #e8e8e8;
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
 }
 
-.kontakt-card:hover {
-  transform: translateY(-3px);
-  border-color: #c9d9e3;
-  box-shadow: 0 14px 28px rgba(24, 48, 67, 0.12);
+.input :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
 }
 
-.kontakt-card__icon {
-  width: 52px;
-  height: 52px;
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(37, 37, 211);
+}
+.kontakt form .gumb4 {
+  width: 50%;
+  border: 3px solid var(--bijela);
+  color: var(--bijela);
+  background-color: var(--tamna);
+}
+.kontakt .drustvene {
+  flex: 0 0 40%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.kontakt .drustvene .descr {
+  color: var(--crna);
+}
+.kontakt .drustvene hr {
+  width: 80%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: var(--crna);
+  margin: 0 auto;
+}
+.drustvena-link {
+  width: 90%;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--crna);
+  border-radius: 10px;
+  outline: none;
+  color: var(--crna);
+  background: var(--gradijent_main);
+  background-size: 400% 400%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  animation: gradientMove 8s ease infinite;
+}
+.drustvena-link img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background-color: var(--bijela);
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #dbf3f8;
-  color: var(--kontakt-accent-dark);
+  margin-right: 15px;
 }
-
-.kontakt-card__icon svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-.kontakt-card h3 {
-  font-size: 0.95rem;
-  color: var(--kontakt-text);
-}
-
-.kontakt-card p {
-  color: var(--kontakt-muted);
-  font-size: 0.82rem;
-  line-height: 1.4;
-}
-
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
 .footer {
   width: 100%;
   color: #f5f7ff;
@@ -577,16 +577,121 @@ body {
   .r-h2 {
     font-size: 5rem;
   }
+  .kontakt {
+    width: 100%;
+    padding: 50px;
+  }
+  .kontakt .content {
+    width: 80%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .kontakt form {
+    padding: 25px;
+    flex: unset;
+    width: 100%;
+  }
+  .kontakt form .descr,
+  .kontakt .drustvene .descr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .kontakt form hr {
+    width: 80%;
+    height: 5px;
+  }
+  .input,
+  textarea {
+    margin: 1em 0 1em 0;
+    width: 70%;
+    position: relative;
+  }
+  .input input,
+  textarea {
+    font-size: 100%;
+    padding: 0.7em;
+    outline: none;
+    color: #e8e8e8;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+  }
+  .kontakt form .gumb4 {
+    width: 70%;
+  }
+  .kontakt .drustvene {
+    flex: unset;
+    width: 100%;
+    padding: 20px;
+  }
 }
 @media (max-width: 768px) {
-
   .navbar__links {
     display: none;
   }
   .navbar__hamburger {
     display: flex;
   }
-
+  .r-h1,
+  .r-h2 {
+    font-size: 3.5rem;
+  }
+  .kontakt-header hr {
+    height: 10px;
+  }
+  .kontakt {
+    width: 100%;
+    padding: 50px;
+  }
+  .kontakt .content {
+    width: 80%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .kontakt form {
+    padding: 25px;
+    flex: unset;
+    width: 100%;
+  }
+  .kontakt form .descr,
+  .kontakt .drustvene .descr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .kontakt form hr {
+    width: 80%;
+    height: 5px;
+  }
+  .input,
+  textarea {
+    margin: 1em 0 1em 0;
+    width: 70%;
+    position: relative;
+  }
+  .input input,
+  textarea {
+    font-size: 100%;
+    padding: 0.7em;
+    outline: none;
+    color: #e8e8e8;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+  }
+  .kontakt form .gumb4 {
+    width: 70%;
+  }
+  .kontakt .drustvene {
+    flex: unset;
+    width: 100%;
+    padding: 20px;
+  }
 
   /*--------------------------------------------------------------------------------------------------------------*/
   /*--------------------------------------------------------------------------------------------------------------*/
@@ -617,18 +722,57 @@ body {
 @media (max-width: 500px) {
   .kontakt-header {
     min-height: 300px;
+  }
+  .kontakt-header .content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .r-h1 {
+    font-size: 2rem;
     text-align: center;
   }
-
-  .kontakt-header .overlay {
-    padding-left: 0;
-    justify-content: center;
+  .r-h2 {
+    font-size: 2rem;
+    text-align: center;
   }
-  .kontakt-header h1 {
-    font-size: 2.5rem;
+  .kontakt-header hr {
+    height: 5px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .kontakt {
+    padding: 25px 0;
+  }
+  .kontakt .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .kontakt form .descr {
+    font-size: 2rem;
+  }
+  .kontakt form hr {
+    height: 5px;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .input,
+  textarea {
+    width: 90%;
+  }
+  .kontakt .content .gumb4 {
+    width: 90%;
+    font-size: 1;
+    padding: 15px;
+  }
+  .kontakt .drustvene hr {
+    width: 90%;
+  }
+  .kontakt .drustvena-link img {
+    width: 30px;
+    height: 30px;
   }
 }
-
 @media (max-width: 920px) {
   .kontakt__form {
     grid-template-columns: 1fr 1fr;
@@ -646,7 +790,6 @@ body {
     grid-column: 1 / -1;
   }
 }
-
 @media (max-width: 620px) {
   .kontakt__inner {
     border-radius: 18px;
